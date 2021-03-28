@@ -2,8 +2,20 @@
 #include <string>
 using namespace std;
 
+#define MAX_SIZE  26
+
+string geninput(int n){
+    //Letters array
+    char letters[MAX_SIZE] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+
+    string rndm = ""; //This string will store the random generated function according to the length 
+    for (int i=0;i<n;i++)
+        rndm=rndm + letters[rand() % MAX_SIZE];  
+
+    return rndm; //Returns randomly generrated string
+}
 //function to find the longest Repeating subsequence
-void findLRS(string str)
+int findLRS(string str)
 {
     int n = str.length();
     
@@ -63,14 +75,17 @@ void findLRS(string str)
      {
          cout<<out[i];
      }
-    cout<<"\nThe length of longest subsequence is :"<<table[n][n];
+    return table[n][n];
 }
 
 int main()
 {   
-    cout<<"Enter the String\n";
-    string input ;
-    cin>>input;
-    findLRS(input);
+    srand(time(NULL));
+    //Assuming maximum length of the string to be 15
+    int len = rand()%15 ; //Generates random length of string.
+    string input = geninput(len);//Generates string
+    cout<<"\n Randomly generated string to find Longest repeating sub-sequence:\n"<<input<<endl;
+    cout << "\nThe length of the longest repeating subsequence is: "
+         << findLRS(input);
     return 0;
 }
