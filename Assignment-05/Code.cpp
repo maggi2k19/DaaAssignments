@@ -84,7 +84,9 @@ int main()
     //Assuming maximum length of the string to be 15
     int len = rand()%15 ; //Generates random length of string.
     string input = geninput(len);//Generates string
-    cout<<"\n Randomly generated string to find Longest repeating sub-sequence:\n"<<input<<endl;
+    cout<<"Group-29 ASSIGNMENT - 05 "<<endl;
+    cout<<"-------------------------------------------------------------------------------------------"<<endl;
+    cout<<"\nRandomly generated string to find Longest repeating sub-sequence:\n"<<input<<endl;
     cout << "\nThe length of the longest repeating subsequence is: "
          << findLRS(input);
     return 0;
