@@ -2,8 +2,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define MAXCOL 10
-#define MAXROW 10
+#define MAXCOL 100
+#define MAXROW 100
 #define MAX 10
 vector<vector<int>>st;
 int R,C;
@@ -90,8 +90,8 @@ void driver()
 int main(){
     srand(time(NULL));
     cout<<"Size of the matrix : "<<endl;
-    R = 1 + rand() % MAXROW;
-    C = 1 + rand() % MAXCOL;
+    R = 50 + rand() % MAXROW;
+    C = 50 + rand() % MAXCOL;
     cout<<R<<"x"<<C<<endl;
     cout<<"Randomly Generated Matrix : "<<endl;
     for (int j=1; j<=R; j++)
