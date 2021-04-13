@@ -17,7 +17,17 @@ cd DAA/Assignment-05
 ```
 ---
 
-
+### TestCases
+```
+Testcase -1 
+Input : aabebcdd 
+Output : abd
+#--------------------------#
+Testcase -2 
+Input : aab
+Output : a
+```
+---
 ### Theory
 The idea is to store the solutions of the previous sub-problems and then from them we can compute the final Longest Repeating sub-sequence . We used bottom-up approach to solve and store the solutions of the sub problems.
 
