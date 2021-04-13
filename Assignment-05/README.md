@@ -21,11 +21,15 @@ cd DAA/Assignment-05
 ```
 Testcase -1 
 Input : aabebcdd 
-Output : abd
+Output : 
+3
+abd
 #--------------------------#
 Testcase -2 
 Input : aab
-Output : a
+Output : 
+1
+a
 ```
 ---
 ### Theory
