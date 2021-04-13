@@ -79,7 +79,7 @@ To find the Longest repeating sub-sequence of a given string:
 \item In this function , we initialise DP table locally. Here we are developing a bottom-up solution to find Longest common repeating sub-sequence.
 \item Check if the characters match and are at different indexes , say i and j.
 \item If yes then store the value the value in DP table at index i,j by adding one to the DP table[i-1][j-1].
-\item Else store the DP table at index i,j as the maximum value of DP table at index i+1,j and i,j+1 i.e; store the maximum of top and left as the value of DP table[i][j].
+\item Else store the DP table at index i,j as the maximum value of DP table at index i-1,j and i,j-1 i.e; store the maximum of top and left as the value of DP table[i][j].
 \item We do this till we reach the end of the DP table.
 \item After the table is done, now we try to print the longest repeating sub-sequence of a given string.
 \item If this cell is greater than diagonally adjacent cell just above it, then same characters are present at Input[i-1] and Input[j-1]. Append any of that to result.If left cell is greater than top, then move left else top.
@@ -115,7 +115,7 @@ findLRS Function:
     count <- table[n][n]
     Assignment i <- n and j <- n
     out <- "\0"
-    while count !="" and i > 0 and j > 0
+    while count !=0 and i > 0 and j > 0
         if table[i][j]
                 >max(table[i][j-1],table[i-1][j])
             output[count-1]=Input[i-1];
